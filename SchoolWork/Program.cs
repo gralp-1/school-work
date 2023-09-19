@@ -6,7 +6,7 @@ namespace SchoolWork
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             var problems = new Dictionary<string, Problem>();
             problems.Add("ball pit", new BallPitProblem());
@@ -19,6 +19,16 @@ namespace SchoolWork
             problems.Add("hello world", new HelloWorldProb());
             problems.Add("magnification", new MagnificationProb());
             problems.Add("temperature", new TemperatureProblem());
+            problems.Add("day format", new DayFormatProblem());
+            problems.Add("max", new MaxProblem());
+            problems.Add("water states", new StatesOfWaterProblem());
+            problems.Add("periodic table", new PeriodicTableProblem());
+            problems.Add("nitrates", new NitrateProblem());
+            problems.Add("exam grade", new ExamGradeProblem());
+            problems.Add("driving test", new DrivingTestProblem());
+            problems.Add("currency", new CurrencyConverterProblem());
+            problems.Add("career quote", new CareerQuoteProblem());
+            
             Console.WriteLine("\"quit\" to exit");
             string? res;
             do
