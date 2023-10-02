@@ -3,6 +3,9 @@ namespace SchoolWork;
 public class CurrencyConverterProblem : Problem
 {
     private Dictionary<string, double> _conversionDict;
+    
+    // NOTE: this is not the main class, it will always be initialised
+    // and therefore have all the currencies entered into the dictionary 
     public CurrencyConverterProblem()
     {
         _conversionDict = new Dictionary<string, double>();
@@ -21,6 +24,6 @@ public class CurrencyConverterProblem : Problem
     {
         var code = "rmb";
         var amount = 150.0;
-        Console.WriteLine($"{amount:C} is {CurrenctConverter(amount, code)} {code}");
+        Console.WriteLine($"{amount:C} is {CurrenctConverter(amount, code):F} {code}");
     }
 }

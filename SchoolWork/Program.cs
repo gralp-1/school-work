@@ -8,6 +8,12 @@ namespace SchoolWork
     {
         private static void Main()
         {
+            var test = new PrecedenceProblem();
+            test.Test();
+        }
+        /*
+        private static void Main()
+        {
             var problems = new Dictionary<string, Problem>();
             problems.Add("ball pit", new BallPitProblem());
             problems.Add("carpet", new CarpetProb());
@@ -45,6 +51,7 @@ namespace SchoolWork
                 }
             } while (res != "quit");
         }
+    */
     }
 }
 

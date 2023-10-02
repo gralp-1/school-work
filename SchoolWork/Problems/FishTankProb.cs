@@ -6,7 +6,7 @@ public class FishTankProb : Problem
 {
     public static void FishTankVolume(double w, double h, double d)
     {
-        var convertedVolume = (w * h * d) / 1000.0;
+        var convertedVolume = w * h * d / 1000.0;
         Console.WriteLine($"Fish tank volume: {convertedVolume}");
     }
 

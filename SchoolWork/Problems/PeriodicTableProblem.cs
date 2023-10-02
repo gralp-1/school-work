@@ -4,7 +4,7 @@ namespace SchoolWork;
 
 public class PeriodicTableProblem : Problem
 {
-    public string PeriodicTable(string sym)
+    public string PeriodicTable(string? sym)
     {
         // just branch on the symbol
         switch (sym.ToLower()) 
@@ -39,7 +39,7 @@ Element Li:
 
     public override void RunProblem()
     {
-        string symbol = Console.ReadLine();
+        string? symbol = Console.ReadLine();
         try
         {
             Console.WriteLine(PeriodicTable(symbol));
