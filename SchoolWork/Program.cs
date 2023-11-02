@@ -8,8 +8,17 @@ namespace SchoolWork
     {
         private static void Main()
         {
-            var test = new PrecedenceProblem();
-            test.Test();
+            // float A = 0.8f; // prey reproduction rate
+            // float B = 0.9f;
+            // float C = 0.1f;
+            // float D = 0.3f;
+            // int initalPredators = 5;
+            // int initalPrey = 30;
+            // var data = LotkaVolterra.PredatorPrey(initalPredators, initalPrey, A,B,C,D);
+            // convert the list of generations into a csv
+            new TimeSheetProblem().RunProblem();
+            // data.ForEach(Console.WriteLine);
+            
         }
         /*
         private static void Main()
