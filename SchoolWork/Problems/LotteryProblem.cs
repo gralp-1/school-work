@@ -5,16 +5,18 @@ public class LotteryProblem
     public int WeeksForLotteryWin(int first, int second, int third)
     {
         int weeks = 0;
-        var RNG = new Random();
-        long randNum1, randNum2, randNum3;;
-        do
+        var RNG = new Random(Environment.TickCount);
+        while (true)
         {
-            randNum1 = RNG.NextInt64(0, 30);
-            randNum2 = RNG.NextInt64(0, 30);
-            randNum3 = RNG.NextInt64(0, 30);
+            int randNum1 = RNG.Next(1, 31);
+            int randNum2 = RNG.Next(1, 31);
+            int randNum3 = RNG.Next(1, 31);
+            if (first == randNum1 && second == randNum2 && third == randNum3)
+            {
+                return weeks;
+            }
             weeks++;
-        } while (first != randNum1 && second != randNum2 && third != randNum3);
+        }
 
-        return weeks;
     }
 }

@@ -2,22 +2,22 @@ namespace SchoolWork;
 
 public class DiscountProblem : Problem
 {
-    public static List<int> Discounts()
+    public static List<int> Discounts(int target)
     {
         // we need to evenly cover 50,
         // gen a random number mod 50 and add it 50/x times
-        int step = new Random().Next() % 50;
-        Console.WriteLine(step);
+        int start = 10;
+        int step = new Random().Next(1,10);
         List<int> steps = new List<int>();
-        for (int i = 10; i < step/50; i += step)
+        for (int i = start; i<=target-step; i++)
         {
-            steps.Add(i+10);
+            int.Clamp(start += step, 0, target);
+            steps.Add(start);
         }
-
         return steps;
     }
     public override void RunProblem()
     {
-        throw new NotImplementedException();
+        Discounts(60).ForEach(Console.WriteLine);
     }
 }
